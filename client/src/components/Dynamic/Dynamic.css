@@ -1,0 +1,13 @@
+.Dynamic-container {
+    max-width: 75%;
+    width: auto;
+    margin-left: 2rem;
+}
+
+.Dynamic-container h1 {
+    margin: 1rem 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 700;
+    text-transform: capitalize;
+}

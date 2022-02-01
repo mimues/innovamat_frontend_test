@@ -1,0 +1,25 @@
+.List {
+    display: flex;
+    flex-direction: column;
+}
+
+.List h2 {
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #C5D6D5;
+}
+
+.List-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.List-content li {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin: 0.5rem;
+}
