@@ -22,12 +22,17 @@
 .NavBar-container a {
     text-decoration: none;
     color: #99ABA9;
-    padding-left: .5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .NavBar-container li {
     text-align: left;
     margin: 0.8rem 0;
-    display: flex;
-    align-items: center;
+    
+}
+
+.NavBar-container span {
+    padding-left: .5rem;
 }

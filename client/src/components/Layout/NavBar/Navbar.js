@@ -12,20 +12,28 @@ const Navbar = () => {
       <h4 className='NavBar-title'>Dinámicas</h4>
       <ul className='NavBar-list'>
         <li>
-          <img src={taller} alt="Taller icon" />
-          <NavLink to='/talleres'>Talleres</NavLink>
+          <NavLink to='/talleres'>
+            <img src={taller} alt="Taller icon" />
+            <span>Talleres</span>
+          </NavLink>
         </li>
         <li>
-          <img src={rincon} alt="Rincon icon" />
-          <NavLink to='/rincones'>Rincones</NavLink>
+          <NavLink to='/rincones'>
+            <img src={rincon} alt="Rincon icon" />
+            <span>Rincones</span>
+          </NavLink>
+        </li>
+        <li> 
+          <NavLink to='/ambientes'>
+            <img src={ambiente} alt="Ambiente icon" />
+            <span>Ambientes</span>
+          </NavLink>
         </li>
         <li>
-          <img src={ambiente} alt="Ambiente icon" />
-          <NavLink to='/ambientes'>Ambientes</NavLink>
-        </li>
-        <li>
-          <img src={rutina} alt="Rutina icon" /> 
-          <NavLink to='/rutinas'>Rutinas</NavLink>
+          <NavLink to='/rutinas'>
+            <img src={rutina} alt="Rutina icon" />
+            <span>Rutinas</span>
+          </NavLink>
         </li>
       </ul>
     </nav>
