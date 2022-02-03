@@ -1,0 +1,25 @@
+.Searchbar-container {
+    margin: 2rem;
+}
+
+.Searchbar-form {
+    display: flex;
+}
+
+.Searchbar-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.Searchbar-filter img {
+    height: 0.55rem;
+    width: 0.7rem;
+}
+
+.Searchbar-filter span {
+    padding: 0 0.3rem;
+    color: #99ABA9;
+    
+}
