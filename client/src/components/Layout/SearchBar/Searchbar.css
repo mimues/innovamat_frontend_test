@@ -1,12 +1,39 @@
-.Searchbar-container {
-    margin: 2rem;
-}
-
 .Searchbar-form {
+    margin: 2rem 0 2rem 1rem;
+    width: 100%;
     display: flex;
 }
 
+.Searchbar-right {
+    width: 90%;
+    text-align: left;
+}
+
+.Searchbar-input {
+    height: 2.5rem;
+    padding-left: 2rem;
+    width: 85%;
+    border: 1px solid #E6E6E6;
+    color: #C5D6D5;
+    border-radius: 0 10px 10px 0;
+}
+
+.Searchbar-right > button {
+    background: #18C6AC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 2.5rem;
+    min-width: 14%;
+    margin-left: 1%;
+}
+
 .Searchbar-filter {
+    border: 1px solid #E6E6E6;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    height: 2.5rem;
+    width: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +46,6 @@
 }
 
 .Searchbar-filter span {
-    padding: 0 0.3rem;
+    padding: 0 0.35rem;
     color: #99ABA9;
-    
 }

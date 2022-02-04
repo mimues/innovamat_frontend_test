@@ -7,11 +7,14 @@ const fromApiResponseToActivities = apiResponse => {
     return []
 }
 
-export default function getActivities ({keyword = 'talleres'} = {}) {
+export default async function getActivities ({keyword = 'talleres'} = {}) {
     const apiURL = `${API_URL}/${keyword}`
 
-    return fetch(apiURL)
-      .then(res => res.json())
-      .then(fromApiResponseToActivities)
-      .catch(err => console.error(err))
+    try {
+        const res = await fetch(apiURL)
+        const apiResponse = await res.json()
+        return fromApiResponseToActivities(apiResponse)
+    } catch (err) {
+        return console.error(err)
+    }
 }

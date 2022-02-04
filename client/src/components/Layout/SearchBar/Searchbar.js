@@ -25,24 +25,26 @@ const Searchbar = (props) => {
   return (
     <div className='Searchbar-container'>
       <div className='Searchbar-form'>
-        {/* <button className='Searchbar-filter'>
+        <button className='Searchbar-filter'>
           <img src={collapse} alt="Collapse icon" />
           <span>FILTROS</span>
           <img src={filter} alt="Filter icon" />
-        </button> */}
-        <input 
-          className="Searchbar-input"
-          type="search"
-          placeholder="Introduce un texto"
-          name="search"
-          onChange={handleChange}
-        />
-        <button 
-          className='Searchbar-button'
-          onClick={handleClick}
-        >
-          Buscar
         </button>
+        <div className='Searchbar-right'>
+          <input 
+            className="Searchbar-input"
+            type="search"
+            placeholder="Introduce un texto"
+            name="search"
+            onChange={handleChange}
+          />
+          <button 
+            className='Searchbar-button'
+            onClick={handleClick}
+          >
+            Buscar
+          </button>
+        </div>
       </div>
     </div>
   )
