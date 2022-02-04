@@ -54,6 +54,11 @@
     align-items: center;
 }
 
+.ListItem-card a {
+    text-decoration: none;
+    color: unset;
+}
+
 .heart {
     width: .7rem;
     height: .7rem;

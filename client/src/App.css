@@ -2,13 +2,19 @@
   text-align: center;
 }
 
-.App-Container {
-  margin: 16px;
+.App-container {
+  width: 100%;
+  margin: 1rem 2rem;
+}
+
+.App-search {
+  margin-right: 100px;
 }
 
 .App-content {
+  margin-right: 100px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 @keyframes App-logo-spin {
