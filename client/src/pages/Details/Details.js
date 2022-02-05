@@ -44,13 +44,17 @@ const Details = () => {
               {Array.from(
                 new Array(numPages),
                 (el,index) => (
-                  <Page 
+                  <Page
+                    className='Details-page'
                     key={`page_${index+1}`}
                     pageNumber={index+1}
                   />
                 )
               )}
             </Document>
+          </div>
+          <div className='Details-download'>
+            <a href={activity.file}>Descargar PDF</a>
           </div>
         </div>
       }
