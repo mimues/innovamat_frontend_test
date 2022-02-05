@@ -1,0 +1,11 @@
+.Details-container {
+    width: 88%;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.Details-pdf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
