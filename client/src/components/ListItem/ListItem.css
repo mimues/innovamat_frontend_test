@@ -42,7 +42,6 @@
 }
 
 .ListItem-card button {
-    pointer-events:stroke ;
     font-family: unset;
     margin: 0 auto;
     margin-top: 0.7rem;
@@ -59,12 +58,22 @@
 }
 
 .ListItem-card-favorite {
+    color: transparent;
     display: flex;
     align-items: center;
 }
+
+/* .ListItem-card-favorite:hover {
+    color: black;
+} */
 
 .heart {
     width: .7rem;
     height: .7rem;
     padding-right: .2rem;
+    opacity: 0;
 }
+/* 
+.heart:hover {
+    opacity: 1;
+} */

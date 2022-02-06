@@ -49,7 +49,7 @@ const ListItem = ({ resource, sectionName }) => {
           <div className='ListItem-card-favorite'>
             {favorite
             ? <>
-                <img className='heart' src={fullHeart} alt="Heart" />
+                <img className='heart' src={fullHeart} alt="Heart" style={{opacity: '1'}} />
                 <span style={{color: '#18C6AC'}}>Favorito</span>
               </>
             : <>
