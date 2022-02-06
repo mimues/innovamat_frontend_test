@@ -18,6 +18,10 @@
     border-radius: 0 10px 10px 0;
 }
 
+.Searchbar-input::placeholder {
+    color: #C5D6D5;
+}
+
 .Searchbar-right > button {
     background: #18C6AC;
     border: none;

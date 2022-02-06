@@ -43,6 +43,7 @@ function App() {
       <div className='App-container'>
         <AppProvider
           value={{
+            favorites,
             addFavorite,
             deleteFavorite
           }}
