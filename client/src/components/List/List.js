@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { normalizeText } from 'utils/utils';
 import ListItem from 'components/ListItem/ListItem'
 import './List.css'
+import 'components/ListItem/ListItem.css'
 
 const List = ({ section, search, click }) => {
   const { resources, sectionName } = section
+  //Filter duplicate resources inside each section
   let filteredResources = resources.filter((resource, index, resources) => (
     resources.findIndex(elem => (elem.id === resource.id)) === index
   ))
   const [copyResources, setCopyResources] = useState([...filteredResources])
   
+  //Filter if searchbar input
   useEffect(() => {
     let copy = [...copyResources]
     if (search.length !== 0) {

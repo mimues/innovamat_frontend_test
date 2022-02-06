@@ -12,7 +12,6 @@ function App() {
   const [search, setSearch] = useState('')
   const [click, setClick] = useState(true)
   const [favorites, setFavorites] = useState([])
-  console.log(favorites);
 
   //SearchBar
   const getInfo = (searchValue) => {

@@ -19,7 +19,18 @@
 }
 
 .List-content li {
+    margin: 0.5rem;
+}
+
+.List-content li:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    margin: 0.5rem;
+}
+
+.List-content li:hover .ListItem-card-favorite {
+    color: black;
+}
+
+.List-content li:hover .heart {
+    opacity: 1;
 }

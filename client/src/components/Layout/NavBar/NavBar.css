@@ -27,12 +27,22 @@
     align-items: center;
 }
 
+.NavBar-container a.isActive {
+    color: #18C6AC;
+    font-weight: 500;
+}
+
+.NavBar-container a.isActive img {
+    filter: invert(59%) sepia(100%) saturate(349%) hue-rotate(121deg) brightness(88%) contrast(95%);
+}
+
 .NavBar-container li {
     text-align: left;
     margin: 0.8rem 0;
     
 }
 
+
 .NavBar-container span {
-    padding-left: .5rem;
+    padding-left: .6rem;
 }
