@@ -29,9 +29,8 @@ const List = ({ section, search, click }) => {
       : (<></>) }
       <ul className='List-content'>
         {copyResources.map(resource => (
-          //hay ids repetidos
           <li key={resource.id}>
-            <ListItem resource={resource}/>
+            <ListItem resource={resource} sectionName={sectionName} />
           </li>
         ))}
       </ul>
