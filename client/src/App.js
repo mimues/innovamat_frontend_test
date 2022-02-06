@@ -23,6 +23,12 @@ function App() {
     setClick(clicked)
   }
 
+  //Reset Searchbar input after click
+  const resetSearchbar = () => {
+    document.querySelector('.Searchbar-input').value = ''
+    setSearch('')
+  }
+
   //Add Favorite
   const addFavorite = (id) => {
     let copy = [...favorites]
@@ -42,9 +48,12 @@ function App() {
       <div className='App-container'>
         <AppProvider
           value={{
+            search,
+            click,
+            resetSearchbar,
             favorites,
             addFavorite,
-            deleteFavorite
+            deleteFavorite,
           }}
         >
           <div className='App-search'>
@@ -53,9 +62,8 @@ function App() {
           <div className='App-content'>
             <Navbar />
             <Routes>
-            {/* arreglar este navigate */}
               <Route path='/' element={<Navigate to='/talleres' />} />
-              <Route path='/:dynamic' element={<Home search={search} click={click} />} />
+              <Route path='/:dynamic' element={<Home />} />
               <Route path='/search' element={<SearchResults />} />
               <Route path='/resources/:id' element={<Details />} />
             </Routes>

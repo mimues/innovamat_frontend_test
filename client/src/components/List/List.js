@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import AppContext from 'context/AppContext';
 import { normalizeText } from 'utils/utils';
 import ListItem from 'components/ListItem/ListItem'
 import './List.css'
 import 'components/ListItem/ListItem.css'
 
-const List = ({ section, search, click }) => {
+const List = ({ section }) => {
   const { resources, sectionName } = section
   //Filter duplicate resources inside each section
   let filteredResources = resources.filter((resource, index, resources) => (
     resources.findIndex(elem => (elem.id === resource.id)) === index
   ))
   const [copyResources, setCopyResources] = useState([...filteredResources])
+  const { search, click, resetSearchbar } = useContext(AppContext)
   
   //Filter if searchbar input
   useEffect(() => {
@@ -23,13 +25,13 @@ const List = ({ section, search, click }) => {
       copy = [...filteredResources]
     }
     setCopyResources(copy)
+    resetSearchbar()
   }, [click])
 
   return (
     <div className='List'>
       {copyResources.length !== 0
-      ? (<h2>{sectionName}</h2>) 
-      : (<></>) }
+      && (<h2>{sectionName}</h2>) }
       <ul className='List-content'>
         {copyResources.map(resource => (
           <li key={resource.id}>
