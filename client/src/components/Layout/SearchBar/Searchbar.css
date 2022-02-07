@@ -18,6 +18,10 @@
     border-radius: 0 10px 10px 0;
 }
 
+.Searchbar-input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance:none;
+}
+
 .Searchbar-input::placeholder {
     color: #C5D6D5;
 }

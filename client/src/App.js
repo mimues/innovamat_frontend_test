@@ -6,11 +6,13 @@ import Navbar from 'components/Layout/NavBar/Navbar'
 import Home from 'pages/Home/Home'
 import SearchResults from 'pages/SearchResults/SearchResults'
 import Details from 'pages/Details/Details'
+import NotFound from 'components/Shared/NotFound/NotFound'
 import './App.css'
 
 function App() {
   const [search, setSearch] = useState('')
   const [click, setClick] = useState(true)
+  const [resetSearchButton, setResetSearchButton] = useState(false)
   const [favorites, setFavorites] = useState([])
 
   //SearchBar
@@ -21,6 +23,18 @@ function App() {
   //Searchbar Button
   const getClick = (clicked) => {
     setClick(clicked)
+    //Show button "back to list"
+    setResetSearchButton(true)
+  }
+
+  //Reset Searchbar input after click
+  const resetSearchbar = () => {
+    document.querySelector('.Searchbar-input').value = ''
+    setSearch('')
+  }
+
+  const hideResetButton = () => {
+    setResetSearchButton(false)
   }
 
   //Add Favorite
@@ -42,9 +56,14 @@ function App() {
       <div className='App-container'>
         <AppProvider
           value={{
+            search,
+            click,
+            resetSearchbar,
+            resetSearchButton,
+            hideResetButton,
             favorites,
             addFavorite,
-            deleteFavorite
+            deleteFavorite,
           }}
         >
           <div className='App-search'>
@@ -53,11 +72,11 @@ function App() {
           <div className='App-content'>
             <Navbar />
             <Routes>
-            {/* arreglar este navigate */}
-              <Route path='/' element={<Navigate to='/talleres' />} />
-              <Route path='/:dynamic' element={<Home search={search} click={click} />} />
+              <Route path='/' element={<Navigate to='dinamicas/talleres' />} />
+              <Route path='/dinamicas/:dynamic' element={<Home />} />
               <Route path='/search' element={<SearchResults />} />
               <Route path='/resources/:id' element={<Details />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
         </AppProvider>

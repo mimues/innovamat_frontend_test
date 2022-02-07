@@ -10,3 +10,12 @@
     font-weight: 700;
     text-transform: capitalize;
 }
+
+.Dynamic-container > button {
+    background: #18C6AC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 2.5rem;
+    padding: 0 20px;
+}

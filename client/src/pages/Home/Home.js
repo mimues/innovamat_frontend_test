@@ -4,31 +4,28 @@ import getActivities from 'services/getActivities'
 import Spinner from 'components/Shared/Spinner/Spinner';
 import { useParams } from 'react-router-dom';
 
-const Home = ({ search, click }) => {
+const Home = () => {
   const { dynamic } = useParams()
-  const [keyword, setKeyword] = useState('talleres')
   const [activities, setActivities] = useState([])
   const [loading, setLoading] = useState(false)
   
   useEffect(() => {
     setLoading(true)
-    setKeyword(dynamic)
-  }, [dynamic]);
-  
-  useEffect(() => {
-    getActivities({keyword})
+    getActivities({dynamic})
     .then(res => {
       setActivities(res)
       setLoading(false)
     })
-  }, [keyword])
+    .catch(err => {
+    })
+  }, [dynamic])
   
   return (
     <>
       {
         loading ?
         <Spinner /> :
-        <Dynamic activities={activities} keyword={keyword} search={search} click={click}/>
+        <Dynamic activities={activities} dynamic={dynamic}/>
       }
     </>
   );
