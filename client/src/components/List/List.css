@@ -34,3 +34,16 @@
 .List-content li:hover .heart {
     opacity: 1;
 }
+
+@media (max-width: 726px) {
+    .List-content {
+        justify-content: space-evenly;
+    }
+    .List-content li {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .List h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
