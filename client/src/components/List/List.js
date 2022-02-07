@@ -5,7 +5,7 @@ import ListItem from 'components/ListItem/ListItem'
 import './List.css'
 import 'components/ListItem/ListItem.css'
 
-const List = ({ section }) => {
+const List = ({ section, reset }) => {
   const { resources, sectionName } = section
   //Filter duplicate resources inside each section
   let filteredResources = resources.filter((resource, index, resources) => (
@@ -26,20 +26,22 @@ const List = ({ section }) => {
     }
     setCopyResources(copy)
     resetSearchbar()
-  }, [click])
+  }, [click, reset])
 
   return (
-    <div className='List'>
-      {copyResources.length !== 0
-      && (<h2>{sectionName}</h2>) }
-      <ul className='List-content'>
-        {copyResources.map(resource => (
-          <li key={resource.id}>
-            <ListItem resource={resource} sectionName={sectionName} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className='List'>
+        {copyResources.length !== 0
+        && (<h2>{sectionName}</h2>) }
+        <ul className='List-content'>
+          {copyResources.map(resource => (
+            <li key={resource.id}>
+              <ListItem resource={resource} sectionName={sectionName} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   )
 }
 

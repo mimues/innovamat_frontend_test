@@ -16,6 +16,8 @@ const Home = () => {
       setActivities(res)
       setLoading(false)
     })
+    .catch(err => {
+    })
   }, [dynamic])
   
   return (
@@ -23,7 +25,7 @@ const Home = () => {
       {
         loading ?
         <Spinner /> :
-        <Dynamic activities={activities} dynamic={dynamic} />
+        <Dynamic activities={activities} dynamic={dynamic}/>
       }
     </>
   );

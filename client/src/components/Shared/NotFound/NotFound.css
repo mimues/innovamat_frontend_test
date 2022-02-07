@@ -1,0 +1,11 @@
+.NotFound-container {
+    width: 88%;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.NotFound-container h1 {
+    margin: 1rem 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}

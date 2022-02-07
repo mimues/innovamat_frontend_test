@@ -43,7 +43,7 @@
     
 }
 
-
 .NavBar-container span {
     padding-left: .6rem;
+    text-transform: capitalize;
 }
