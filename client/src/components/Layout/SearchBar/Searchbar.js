@@ -3,6 +3,8 @@ import './Searchbar.css'
 import { normalizeText } from 'utils/utils';
 import collapse from 'img/Collapse.png'
 import filter from 'img/Filter.png'
+import lupa from 'img/lupa.png'
+
 
 const Searchbar = (props) => {
   const [click, setClick] = useState(false)
@@ -42,7 +44,8 @@ const Searchbar = (props) => {
             className='Searchbar-button'
             onClick={handleClick}
           >
-            Buscar
+            <span>Buscar</span>
+            <img src={lupa} alt="Lupa icon" />
           </button>
         </div>
       </div>

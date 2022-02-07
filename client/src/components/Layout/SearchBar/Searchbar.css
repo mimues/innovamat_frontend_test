@@ -1,16 +1,20 @@
 .Searchbar-form {
-    margin: 2rem 0 2rem 1rem;
+    margin: 2rem 0 2rem .3rem;
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .Searchbar-right {
     width: 90%;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .Searchbar-input {
-    height: 2.5rem;
+    height: 100%;
+    padding: 15px 0;
     padding-left: 2rem;
     width: 85%;
     border: 1px solid #E6E6E6;
@@ -26,21 +30,26 @@
     color: #C5D6D5;
 }
 
-.Searchbar-right > button {
+.Searchbar-button {
+    padding: unset;
     background: #18C6AC;
     border: none;
     border-radius: 10px;
     color: white;
-    height: 2.5rem;
+    padding: 15px 0;
     min-width: 14%;
     margin-left: 1%;
+}
+
+.Searchbar-button img {
+    display: none;
 }
 
 .Searchbar-filter {
     border: 1px solid #E6E6E6;
     border-right: none;
     border-radius: 10px 0 0 10px;
-    height: 2.5rem;
+    padding: 15px 0;
     width: 10rem;
     display: flex;
     justify-content: center;
@@ -56,4 +65,57 @@
 .Searchbar-filter span {
     padding: 0 0.35rem;
     color: #99ABA9;
+}
+
+@media (max-width: 726px) {
+    .Searchbar-container {
+        padding: 10px 0;
+        background: #EDEDED;
+    }
+    .Searchbar-form {
+        margin: 0;
+    }
+    .Searchbar-filter {
+        background: white;
+        width: 2rem;
+        padding: 5px 0;
+    }
+    .Searchbar-filter span {
+        display: none;
+    }
+    .Searchbar-filter img:first-of-type {
+        display: none;
+    }
+    .Searchbar-filter img:last-of-type {
+        height: 0.7rem;
+        width: 0.8rem;
+    }
+    .Searchbar-right {
+        width: 80%;
+    }
+    .Searchbar-input {
+        border-radius: 0;
+        width: 90%;
+        border-right: none;
+        padding-left: 10px;
+    }
+    .Searchbar-button {
+        background-color: white;
+        min-width: unset;
+        margin-left: 0;
+        width: 10%;
+        padding: 13px 0;
+        border: 1px solid #E6E6E6;
+        border-radius: 0 10px 10px 0;
+        border-left: none;
+    }
+    .Searchbar-button span {
+        display: none;
+    }
+    .Searchbar-button img {
+        padding-right: 5px;
+        display: unset;
+        width: 20px;
+        filter: invert(59%) sepia(100%) saturate(349%) hue-rotate(121deg) brightness(88%) contrast(95%);
+    }
 }

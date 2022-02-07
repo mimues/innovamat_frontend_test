@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { AppProvider } from 'context/AppContext'
 import Searchbar from 'components/Layout/SearchBar/Searchbar'
 import Navbar from 'components/Layout/NavBar/Navbar'
+import Footer from 'components/Layout/Footer/Footer'
 import Home from 'pages/Home/Home'
 import SearchResults from 'pages/SearchResults/SearchResults'
 import Details from 'pages/Details/Details'
@@ -33,6 +34,7 @@ function App() {
     setSearch('')
   }
 
+  //Hide Button when list is reset
   const hideResetButton = () => {
     setResetSearchButton(false)
   }
@@ -79,6 +81,7 @@ function App() {
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
+          <Footer />
         </AppProvider>
       </div>
     </div>
